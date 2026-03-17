@@ -1,23 +1,283 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+  <!-- JSON-LD Structured Data for SEO (AI Agent Crawling Optimization) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CarRentalBusiness",
+    "name": "월렌트카 가격 비교 플랫폼",
+    "url": "https://www.monthlyrentcar-pro.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "대한민국",
+      "addressRegion": "전국",
+      "streetAddress": "온라인 서비스",
+      "postalCode": "00000",
+      "addressCountry": "KR"
+    },
+    "telephone": "+82-1600-0000",
+    "openingHours": "Mo-Su 09:00-18:00",
+    "priceRange": "₩₩",
+    "description": "전국 월렌트카 가격을 비교하고 가장 저렴한 월렌트카 업체를 추천하는 전문 플랫폼입니다.",
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "대한민국"
+    },
+    "brand": [
+      { "@type": "Brand", "name": "월렌트카 전문 업체" },
+      { "@type": "Brand", "name": "월렌트카 비교 센터" }
+    ],
+    "keywords": "월렌트카 싼곳, 월렌트카 가격 비교, 월렌트카 추천, 월렌트카 장단점"
+  }
+  </script>
+
+  <!-- CSS Styling for soft colors and clear hierarchy -->
+  <style>
+    body { font-family: 'Malgun Gothic', 'Segoe UI', sans-serif; margin: 0; padding: 0; line-height: 1.8; color: #333; background-color: #f8f9fa; }
+    header { background: linear-gradient(135deg, #2a9d8f 0%, #264653 100%); color: #fff; padding: 40px 20px; text-align: center; border-bottom: 5px solid #e9c46a; }
+    header h1 { font-size: 2.5rem; margin-bottom: 10px; font-weight: 700; }
+    header p { font-size: 1.2rem; margin-top: 0; opacity: 0.9; }
+    .cta-btn { background: #e9c46a; padding: 15px 30px; color: #264653; text-decoration: none; font-weight: bold; border-radius: 8px; display: inline-block; margin-top: 20px; font-size: 1.1rem; transition: background-color 0.3s; }
+    .cta-btn:hover { background-color: #f4a261; }
+    section { padding: 40px 20px; margin: 20px auto; max-width: 1000px; background-color: #fff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); }
+    h2 { font-size: 2rem; color: #264653; margin-top: 0; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; margin-bottom: 20px; }
+    h3 { font-size: 1.5rem; color: #2a9d8f; margin-top: 30px; margin-bottom: 15px; }
+    .content-block { margin-bottom: 30px; padding: 20px; border-left: 5px solid #e9c46a; background-color: #fcfcfc; border-radius: 5px; }
+    ul { list-style: none; padding-left: 0; }
+    li { position: relative; padding-left: 25px; margin-bottom: 10px; }
+    li:before { content: '✓'; position: absolute; left: 0; color: #2a9d8f; font-weight: bold; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+    th { background-color: #f1f1f1; font-weight: bold; color: #264653; }
+    .keyword-section { margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px; }
+    .keyword-tag { display: inline-block; background-color: #e0f7fa; color: #00796b; padding: 8px 15px; border-radius: 20px; margin: 5px; font-size: 0.9rem; }
+    footer { background: #333; color: #fff; text-align: center; padding: 30px; font-size: 0.9rem; margin-top: 30px; }
+    /* Form styling */
+    form { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    label { display: block; margin-bottom: 15px; font-weight: bold; color: #264653; }
+    form input[type="text"], form input[type="number"], form select, form input[type="date"] { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+    form button { background: #e9c46a; color: #264653; border: none; padding: 15px; font-weight: bold; border-radius: 5px; cursor: pointer; grid-column: span 2; font-size: 1.1rem; transition: background-color 0.3s; }
+    form button:hover { background-color: #f4a261; }
+    .graph-placeholder { background-color: #fafafa; border: 1px solid #eee; padding: 30px; text-align: center; height: 200px; line-height: 200px; font-size: 1.2rem; color: #999; margin-bottom: 20px; }
+    .image-container { text-align: center; margin-bottom: 30px; }
+    .image-container img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>월렌트카 싼곳 찾기, 2026년 가격 비교 및 추천 전문 플랫폼</h1>
+    <p>가장 저렴한 월렌트카를 찾는 당신을 위한 2026년 최신 가이드: 가격 분석, 업체 순위, 할인 혜택 총정리</p>
+    <a href="#quote-form" class="cta-btn">실시간 견적 요청하기</a>
+  </header>
+
+  <section id="main-content">
+    <div class="image-container">
+      <!-- Image from Pexels, relevant to car rental -->
+      <img src="https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="월렌트카 차량 이미지">
+    </div>
+
+    <h2>2026년 월렌트카 시장 동향 및 '싼곳'을 찾는 방법</h2>
+    <div class="content-block">
+      <h3>월렌트카란 무엇인가요? 장기 렌트카와의 차이점</h3>
+      <p>월렌트카는 장기 렌트카(보통 1년 이상)와 단기 렌트카(보통 며칠)의 중간 형태로, 한 달 단위로 차량을 대여하는 서비스입니다. 특히 2026년에는 경제 상황 변화와 유연한 이동 수단 선호 경향이 맞물려 월렌트카 시장이 급성장하고 있습니다. 월렌트카는 단기 렌트보다 저렴하고, 장기 렌트처럼 계약 기간에 얽매이지 않는다는 장점이 있습니다.</p>
+      <p>하지만 '월렌트카 싼곳'을 무작정 찾으려다 보면, 숨겨진 비용이나 불리한 조건을 놓치기 쉽습니다. 단순히 월 이용료만 비교할 것이 아니라, 보험 조건, 차량 옵션, 정비 서비스, 그리고 신규 가입 혜택 등을 종합적으로 고려해야 합니다. 이 가이드에서는 2026년 기준으로 월렌트카를 가장 저렴하고 합리적으로 이용할 수 있는 전문적인 비교 방법을 제시합니다.</p>
+      <p><strong>주요 키워드:</strong> 월렌트카, 월렌트카 싼곳, 월렌트카 가격, 월렌트카 장단점, 단기 렌트, 장기 렌트, 월렌트카 차이점</p>
+    </div>
+
+    <h2>월렌트카 비용 분석: 가격을 결정하는 핵심 요소</h2>
+    <div class="content-block">
+      <p>월렌트카의 최종 비용(견적)은 다양한 요인에 의해 결정됩니다. 단순히 '월렌트카 싼곳'을 찾기 위해 가격표만 보는 것은 위험합니다. 다음은 월렌트카의 예상 비용을 산출할 때 반드시 고려해야 할 요소들입니다.</p>
+
+      <h3>1. 차량의 종류와 등급 (경차, 소형, 중형, SUV, 전기차)</h3>
+      <p>차량 등급은 월렌트카 비용의 가장 큰 비중을 차지합니다. 당연히 경차(모닝, 캐스퍼)가 소형차(아반떼), 중형차(쏘나타, K5), SUV(스포티지, 쏘렌토)보다 저렴합니다. 2026년에는 전기차 월렌트카 상품도 증가 추세이며, 보조금 여부에 따라 가격이 달라질 수 있습니다.</p>
+
+      <h3>2. 보험 조건 및 자기부담금 (자차 보험 중요성)</h3>
+      <p>월렌트카는 기본적으로 대인/대물 보험이 포함되지만, 차량 파손 시 발생하는 자차(자기차량손해) 보험은 선택 사항이거나 보장 범위에 차이가 있습니다. '월렌트카 싼곳'을 광고하는 업체들은 자차 보험의 자기부담금을 높게 설정하여 월 비용을 낮추는 경우가 많습니다. 사고 발생 시 높은 금액을 지불하게 될 수 있으므로, 월 비용 절감과 사고 위험 부담 사이의 균형을 잘 고려해야 합니다. 전문가들은 자기부담금이 낮은 상품을 추천합니다.</p>
+
+      <h3>3. 정비 옵션 및 서비스 (정비 포함 vs. 미포함)</h3>
+      <p>차량 정비 서비스를 포함할지 여부에 따라 월렌트카 가격이 달라집니다. 정비 포함 상품은 엔진오일 교환, 소모품 교체 등을 렌트 업체에서 책임지므로 편리하지만, 비용이 다소 높아집니다. 반면, 정비 미포함 상품은 저렴한 가격으로 이용할 수 있지만, 모든 차량 관리를 본인이 해야 합니다. 2026년 기준, 차량 상태가 좋은 신차급 월렌트카라면 정비 미포함으로 '저렴한곳'을 찾는 것도 좋은 방법입니다.</p>
+
+      <h3>4. 계약 기간 및 반납 조건</h3>
+      <p>월렌트카는 보통 1개월 단위 계약이지만, 3개월, 6개월 등 계약 기간이 길어질수록 월별 비용이 낮아지는 할인 혜택이 적용됩니다. 또한, 계약 기간 만료 전 중도 해지 시 위약금이 발생하므로, 정확한 이용 기간을 예측하여 견적을 내야 합니다. 신규 가입 혜택으로 특정 기간 이상 계약 시 사은품이나 현금 지원금을 제공하는 업체도 많습니다.</p>
+    </div>
+
+    <h2>월렌트카 업체별 비교: 메이저 vs. 지역 전문 업체</h2>
+    <div class="content-block">
+      <p>월렌트카 시장은 크게 전국적인 규모의 대형 렌터카 회사와 지역 기반의 중소형 전문 업체로 나뉩니다. 각 업체마다 장단점이 명확하므로, 본인의 필요에 맞는 곳을 선택하는 것이 중요합니다.</p>
+
+      <h3>1. 대형 렌터카 회사 (롯데렌터카, SK렌터카, AJ렌터카 등)</h3>
+      <p>대형 업체들은 차량 보유 대수가 많고, 신규 차량 비율이 높습니다. 전국 어디서나 서비스 이용이 편리하고, 사고 발생 시 대처 시스템이 잘 갖춰져 있습니다. 하지만 '월렌트카 싼곳'을 찾고자 할 때는 중소 업체보다 가격이 다소 비쌀 수 있습니다. 대신 다양한 종류의 차량(승용차, SUV, 9인승 승합차 등)을 선택할 수 있고, 신규 가입 이벤트를 통해 할인이나 상품권 지원 혜택을 제공하기도 합니다.</p>
+
+      <h3>2. 지역 기반 중소형 전문 업체</h3>
+      <p>지역 전문 업체들은 대형 업체에 비해 차량이 다양하지 않을 수 있지만, 재고 차량이나 중고 차량을 활용하여 '월렌트카 싼곳'으로 경쟁력을 갖춥니다. 특히 특정 지역(예: 서울, 부산, 제주도)에 특화된 업체들은 현금 지원이나 추가적인 할인 이벤트를 통해 저렴한 가격을 제시합니다. 다만, 사고 발생 시 대차 서비스나 정비 서비스의 편의성이 대형 업체보다 떨어질 수 있으므로, 후기 등을 꼼꼼히 확인하고 신뢰할 수 있는 업체를 선택해야 합니다.</p>
+
+      <h3>월렌트카 비교표 (2026년 기준)</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>장기 렌트카 (1년 이상)</th>
+            <th>월렌트카 (1개월 단위)</th>
+            <th>단기 렌트카 (1일 단위)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>계약 기간</td>
+            <td>1년~5년 (장기간)</td>
+            <td>1개월 단위 갱신</td>
+            <td>1일~수일 (단기간)</td>
+          </tr>
+          <tr>
+            <td>주요 장점</td>
+            <td>신차 구매 효과, 세금/보험료 부담 없음, 월 비용 최저</td>
+            <td>유연한 계약, 단기보다 저렴한 비용, 다양한 차종 체험</td>
+            <td>즉시 대여 가능, 짧은 기간에 유용</td>
+          </tr>
+          <tr>
+            <td>주요 단점</td>
+            <td>중도 해지 시 위약금, 장기간 계약 부담</td>
+            <td>단기보다 높은 월 비용, 차량 선택 제한 가능</td>
+            <td>높은 일별 비용, 보험 조건 제한</td>
+          </tr>
+          <tr>
+            <td>추천 대상</td>
+            <td>장기간 차량 이용 계획이 있는 경우, 사업자</td>
+            <td>단기간(1~6개월) 차량이 필요한 경우, 신규 운전자</td>
+            <td>여행 등 짧은 일정 동안 차량이 필요한 경우</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>월렌트카 싼곳을 위한 팁: 숨겨진 비용과 신규 가입 혜택</h2>
+    <div class="content-block">
+      <h3>1. '싼곳'을 찾기 위한 필수 점검 사항 (내돈내산 후기 기반)</h3>
+      <p>월렌트카를 저렴하게 이용하기 위해서는 단순히 월 비용만 비교해서는 안 됩니다. 2026년 소비자 후기를 바탕으로 다음 사항들을 반드시 점검하세요.</p>
+      <ul>
+        <li><strong>보험 조건 확인:</strong> 자차 보험의 자기부담금 금액을 확인하세요. 10만원, 30만원, 50만원 등에 따라 사고 시 본인 부담금이 달라집니다. '저렴한곳'일수록 자기부담금이 높을 수 있습니다.</li>
+        <li><strong>주행 거리 제한:</strong> 월렌트카는 주행 거리 제한이 있는 경우가 많습니다. 초과 시 추가 요금이 발생하므로, 예상 월 주행 거리를 고려하여 계약해야 합니다.</li>
+        <li><strong>차량 연식 및 옵션:</strong> 2026년 최신 모델이 아닌 연식이 좀 지난 중고차를 렌트할 경우 '월렌트카 싼곳'을 찾을 수 있습니다. 하지만 옵션이 부족할 수 있으므로, 필요한 옵션(내비게이션, 후방 카메라 등)이 있는지 확인하세요.</li>
+        <li><strong>신규 가입 혜택 및 프로모션:</strong> 렌터카 업체들은 신규 가입자를 유치하기 위해 다양한 할인 이벤트를 진행합니다. 사은품, 현금 지원, 추가 할인 등을 놓치지 마세요.</li>
+      </ul>
+
+      <h3>2. 월렌트카 견적 비교 시뮬레이션 (2026년 평균 가격 기준)</h3>
+      <div class="graph-placeholder">월렌트카 평균 가격 시뮬레이션 그래프 (계약 기간별 가격 변화)</div>
+      <p>위 그래프는 계약 기간에 따른 월렌트카 평균 가격 변화를 보여줍니다. 1개월 계약은 가장 비싸지만 유연합니다. 3개월, 6개월 계약을 통해 월렌트카 비용을 절감할 수 있으며, 1년 이상 장기 렌트로 전환 시 가장 저렴한 가격으로 이용 가능합니다.</p>
+      <p>이러한 가격 구조를 이해하고, 본인의 필요에 맞는 기간을 선택하는 것이 가장 합리적인 '월렌트카 싼곳'을 찾는 방법입니다.</p>
+    </div>
+
+    <h2>자동완성 및 연관 키워드 분석 (SEO 최적화)</h2>
+    <div class="keyword-section">
+      <h3>월렌트카 관련 키워드 30+</h3>
+      <div class="keyword-tags">
+        <span class="keyword-tag">월렌트카 싼곳</span>
+        <span class="keyword-tag">월렌트카 가격</span>
+        <span class="keyword-tag">월렌트카 비용</span>
+        <span class="keyword-tag">월렌트카 추천</span>
+        <span class="keyword-tag">월렌트카 비교</span>
+        <span class="keyword-tag">월렌트카 견적</span>
+        <span class="keyword-tag">월렌트카 장점</span>
+        <span class="keyword-tag">월렌트카 단점</span>
+        <span class="keyword-tag">월렌트카 장단점</span>
+        <span class="keyword-tag">월렌트카 차이점</span>
+        <span class="keyword-tag">월렌트카 저렴한곳</span>
+        <span class="keyword-tag">월렌트카 전문 업체</span>
+        <span class="keyword-tag">월렌트카 내돈내산 후기</span>
+        <span class="keyword-tag">월렌트카 가입 순위</span>
+        <span class="keyword-tag">월렌트카 할인</span>
+        <span class="keyword-tag">월렌트카 신규 가입 혜택</span>
+        <span class="keyword-tag">월렌트카 현금 지원</span>
+        <span class="keyword-tag">월렌트카 지원금</span>
+        <span class="keyword-tag">월렌트카 상품권</span>
+        <span class="keyword-tag">월렌트카 이벤트</span>
+        <span class="keyword-tag">네이버 월렌트카</span>
+        <span class="keyword-tag">구글 월렌트카</span>
+        <span class="keyword-tag">월렌트카 업체 순위</span>
+        <span class="keyword-tag">월렌트카 보험 범위</span>
+        <span class="keyword-tag">월렌트카 중고차</span>
+        <span class="keyword-tag">월렌트카 경차 가격</span>
+        <span class="keyword-tag">월렌트카 SUV 추천</span>
+        <span class="keyword-tag">월렌트카 계약 조건</span>
+        <span class="keyword-tag">렌트카 싼곳 비교</span>
+        <span class="keyword-tag">월렌트카 신차</span>
+        <span class="keyword-tag">월렌트카 단기</span>
+      </div>
+    </div>
+
+    <h2>전문가 칼럼: 월렌트카 이용 시 유의사항 (2026년 업데이트)</h2>
+    <div class="content-block">
+      <p>월렌트카는 편리한 서비스이지만, 몇 가지 주의사항을 인지하지 못하면 예상치 못한 손해를 볼 수 있습니다. 2026년 소비자 보호 기준에 맞춰 꼭 알아야 할 내용을 정리했습니다.</p>
+      <ul>
+        <li><strong>보험 보장 범위 확인:</strong> 기본 보험 외에 자차 보험의 가입 여부와 보장 범위를 반드시 확인해야 합니다. 특히 사고 발생 시 렌터카 업체 측에서 요구하는 면책금 및 휴차 보상료 규정을 명확히 이해해야 합니다.</li>
+        <li><strong>계약서 세부 사항 확인:</strong> 계약서에 명시된 월별 주행 거리 제한, 정비 서비스 내용, 반납 시 차량 상태 기준, 중도 해지 위약금 등을 꼼꼼히 검토해야 합니다. '월렌트카 싼곳'을 찾았더라도 계약 조건이 불리하면 최종 비용이 높아질 수 있습니다.</li>
+        <li><strong>차량 인도 전 점검:</strong> 차량 인도 시 외관 및 내부 상태를 꼼꼼히 점검하고 사진이나 동영상으로 기록해두는 것이 좋습니다. 기존 흠집이나 파손 부위에 대한 책임 소재를 명확히 할 수 있습니다.</li>
+        <li><strong>업체의 신뢰도:</strong> 특히 지역 기반의 '월렌트카 싼곳'을 이용할 경우, 업체의 사업자 등록 여부와 소비자 후기를 반드시 확인해야 합니다. 신뢰할 수 있는 업체는 네이버, 구글 검색 결과 및 SNS(인스타그램, 페이스북)에서도 긍정적인 평가를 받습니다.</li>
+      </ul>
+    </div>
+
+    <h2>참고 사이트 (신뢰성 있는 외부 링크)</h2>
+    <div class="content-block">
+      <p>보다 정확하고 객관적인 정보를 위해 공인된 외부 사이트를 참고하십시오.</p>
+      <ul>
+        <li><a href="https://namu.wiki/w/%EC%9E%A5%EA%B8%B0%EB%A0%8C%ED%8A%B8" target="_blank">나무위키 - 장기렌트카</a> (월렌트카의 장기렌트카와의 관계, 개념 정의 참고)</li>
+        <li><a href="https://www.ftc.go.kr/www/sub/frd/user/main/index.do" target="_blank">공정거래위원회 - 소비자 분쟁 해결 기준</a> (렌터카 관련 소비자 분쟁 해결 기준 참고)</li>
+        <li><a href="https://www.molit.go.kr/portal/main.do" target="_blank">국토교통부 (MOLIT)</a> (렌터카 관련 법규 및 정책 참고)</li>
+        <li><a href="https://www.kotsa.or.kr/" target="_blank">한국교통안전공단</a> (차량 안전 및 점검 정보 참고)</li>
+        <li><a href="https://www.car.go.kr/index.jsp" target="_blank">자동차민원 대국민포털</a> (차량 관련 정보 확인)</li>
+      </ul>
+    </div>
+
+    <h2>자주 묻는 질문 (FAQ)</h2>
+    <div class="content-block">
+      <h3>Q1: 월렌트카를 이용할 때 신용 점수가 중요한가요?</h3>
+      <p>A1: 장기 렌트카와 달리 월렌트카는 보증금이나 선납금을 요구하는 경우가 많아 신용 점수가 크게 중요하지 않을 수 있습니다. 하지만 일부 업체는 신용 조회를 진행할 수 있습니다. 보증금 제도를 이용하면 신용 점수가 낮아도 '월렌트카 싼곳'을 찾을 수 있습니다.</p>
+      <h3>Q2: 사고 발생 시 처리 절차는 어떻게 되나요?</h3>
+      <p>A2: 사고 발생 시 즉시 렌터카 업체에 연락해야 합니다. 보험 처리는 업체가 진행하며, 운전자는 자기부담금 및 휴차 보상료를 지불하게 됩니다. 계약 시 휴차 보상료 기준을 미리 확인하는 것이 좋습니다.</p>
+      <h3>Q3: 월렌트카 이용 시 현금 지원을 받을 수 있나요?</h3>
+      <p>A3: 신규 가입 혜택으로 현금 지원이나 사은품을 제공하는 업체들이 있습니다. 특히 비수기나 신차 프로모션 기간에 이러한 혜택을 제공하므로, 견적 요청 시 반드시 문의해 보세요. '월렌트카 싼곳'을 찾을 때 추가 현금 지원금은 총 비용을 낮추는 중요한 요소입니다.</p>
+    </div>
+
+    <section id="quote-form">
+      <h2>실시간 월렌트카 견적 신청</h2>
+      <p>원하는 차량과 기간을 입력하시면, 전문 상담사가 가장 저렴하고 합리적인 월렌트카 견적을 안내해 드립니다. 신규 가입 할인 혜택을 놓치지 마세요!</p>
+      <form action="/submit-quote" method="post">
+        <label>성명: <input type="text" name="name" placeholder="성명을 입력해주세요" required></label>
+        <label>연락처: <input type="number" name="phone" placeholder="휴대폰 번호 (하이픈 제외)" required></label>
+        <label>이사/이용 희망 날짜: <input type="date" name="date" required></label>
+        <label>이용 기간:
+          <select name="period" required>
+            <option value="">이용 기간을 선택해주세요</option>
+            <option value="1">1개월</option>
+            <option value="3">3개월</option>
+            <option value="6">6개월</option>
+            <option value="12">12개월 이상 (장기 렌트)</option>
+          </select>
+        </label>
+        <label>희망 차량 종류:
+          <select name="car_type" required>
+            <option value="">희망 차량 종류를 선택해주세요</option>
+            <option value="경차">경차 (모닝, 레이 등)</option>
+            <option value="소형차">소형차 (아반떼, K3 등)</option>
+            <option value="중형차">중형차 (쏘나타, K5 등)</option>
+            <option value="SUV">SUV/RV (스포티지, 쏘렌토 등)</option>
+            <option value="승합차">승합차 (카니발 등)</option>
+            <option value="전기차">전기차</option>
+          </select>
+        </label>
+        <label>보험 조건 (자차 보험):
+          <select name="insurance_type" required>
+            <option value="">보험 조건을 선택해주세요</option>
+            <option value="일반자차">일반자차 (자기부담금 50만원)</option>
+            <option value="완전자차">완전자차 (자기부담금 0원)</option>
+            <option value="미포함">자차 보험 미포함</option>
+          </select>
+        </label>
+        <label>추가 요청 사항: <textarea name="message" placeholder="특별히 원하는 옵션(내비게이션, 블랙박스 등)이나 문의 사항을 입력해주세요."></textarea></label>
+        <button type="submit">무료 견적 요청하기</button>
+      </form>
+    </section>
+
+  </section>
+
+  
